@@ -21,4 +21,16 @@ Kirby: Is there a significant difference in reccommended gun control action for 
 
 Michael: test change 1
 
-Kirby: hello
+Kirby: data wrangling and counts 
+
+```{r}
+#counting how many males and females said about the three gun control options 
+
+get_guns <- gc_df %>% 
+  filter(gender != "NA", make_get_guns != "NA") %>% 
+  count(gender, make_get_guns)
+
+get_guns
+```
+
+
